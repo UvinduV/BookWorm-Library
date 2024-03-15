@@ -42,7 +42,7 @@ public class UserLoginFormController {
 
     @FXML
     void signUpChangeOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/user_register.fxml"));
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/UserSignUpForm.fxml"));
 
         Scene scene = new Scene(root);
 
