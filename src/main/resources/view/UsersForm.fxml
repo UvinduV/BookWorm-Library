@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="668.0" prefWidth="755.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UsersFormController">
+   <children>
+      <AnchorPane fx:id="root" layoutX="2.0" layoutY="2.0" prefHeight="668.0" prefWidth="755.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label layoutX="31.0" layoutY="27.0" prefHeight="46.0" prefWidth="194.0" text="Users">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtName" layoutX="579.0" layoutY="48.0" prefHeight="27.0" prefWidth="167.0">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableUser" layoutX="25.0" layoutY="107.0" prefHeight="354.0" prefWidth="556.0" style="-fx-background-radius: 5px;">
+               <columns>
+                  <TableColumn fx:id="colUserId" prefWidth="157.0" text="User ID" />
+                  <TableColumn fx:id="colUserName" prefWidth="212.0" text="UserName" />
+                  <TableColumn fx:id="colTransaction" prefWidth="185.0" />
+               </columns>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.35221734642982483" green="0.6447368264198303" blue="0.3619680106639862" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
