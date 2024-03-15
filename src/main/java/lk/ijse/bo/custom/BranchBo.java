@@ -1,9 +1,7 @@
 package lk.ijse.bo.custom;
 
 import lk.ijse.bo.SuperBo;
-import lk.ijse.dto.BookDto;
 import lk.ijse.dto.BranchDto;
-import lk.ijse.entity.Branch;
 
 import java.sql.SQLException;
 import java.util.List;

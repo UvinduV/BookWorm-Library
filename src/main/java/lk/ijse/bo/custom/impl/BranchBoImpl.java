@@ -1,11 +1,9 @@
-package lk.ijse.bo.impl;
+package lk.ijse.bo.custom.impl;
 
 import lk.ijse.bo.custom.BranchBo;
 import lk.ijse.dao.DaoFactory;
 import lk.ijse.dao.custom.BranchDao;
-import lk.ijse.dto.BookDto;
 import lk.ijse.dto.BranchDto;
-import lk.ijse.entity.Book;
 import lk.ijse.entity.Branch;
 
 import java.sql.SQLException;
