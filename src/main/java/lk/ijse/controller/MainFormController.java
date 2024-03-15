@@ -19,7 +19,7 @@ public class MainFormController {
 
     @FXML
     void adminOnAction(ActionEvent event) throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/admin_login.fxml"));
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/AdminLoginForm.fxml"));
 
         Scene scene = new Scene(rootNode);
 
@@ -30,7 +30,7 @@ public class MainFormController {
 
     @FXML
     void userOnAction(ActionEvent event) throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/user_login.fxml"));
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/UserLoginForm.fxml"));
 
         Scene scene = new Scene(rootNode);
 
