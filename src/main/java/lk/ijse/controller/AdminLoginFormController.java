@@ -28,7 +28,7 @@ public class AdminLoginFormController {
     @FXML
     private TextField txtUsername;
     AdminBo adminBo = (AdminBo) BoFactory.getBOFactory().getBo(BoFactory.BoTypes.ADMIN);
-    MainAdminController mainAdminController = new MainAdminController();
+    AdminDashboardController mainAdminController = new AdminDashboardController();
     @FXML
     void btnSignInOnAction(ActionEvent event) {
         String userName = txtUsername.getText();
@@ -74,7 +74,7 @@ public class AdminLoginFormController {
     }
 
     public void openWindow() throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/admin_dashboard.fxml"));
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/Admindashboard.fxml"));
 
         Scene scene = new Scene(rootNode);
         Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();

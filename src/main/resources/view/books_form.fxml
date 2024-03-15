@@ -7,77 +7,14 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Bloom?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootNode" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #f5f6fa;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BookController">
+<AnchorPane fx:id="rootNode" prefHeight="668.0" prefWidth="765.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BookController">
    <children>
-      <AnchorPane layoutX="8.0" layoutY="12.0" prefHeight="677.0" prefWidth="223.0" style="-fx-background-color: #353b48; -fx-background-radius: 15px;">
-         <effect>
-            <DropShadow />
-         </effect>
-         <children>
-            <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="205.0" onAction="#btnBooksOnAction" prefHeight="48.0" prefWidth="156.0" text="Books" textFill="WHITE">
-               <font>
-                  <Font name="Ubuntu Mono Bold" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <Bloom />
-               </effect>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="27.0" layoutY="268.0" onAction="#btnBranchesOnAction" prefHeight="48.0" prefWidth="156.0" text="   Branches" textFill="WHITE">
-               <font>
-                  <Font name="Ubuntu Mono Bold" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <Bloom />
-               </effect>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="339.0" onAction="#btnUsersOnAction" prefHeight="48.0" prefWidth="156.0" text="Users" textFill="WHITE">
-               <font>
-                  <Font name="Ubuntu Mono Bold" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <Bloom />
-               </effect>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="600.0" onAction="#btnSignOutOnAction" prefHeight="48.0" prefWidth="156.0" text="Sign Out" textFill="WHITE">
-               <font>
-                  <Font name="Ubuntu Mono Bold" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <Bloom />
-               </effect>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="139.0" onAction="#btnDashboardOnAction" prefHeight="48.0" prefWidth="156.0" text="  Dashboard" textFill="WHITE">
-               <font>
-                  <Font name="Ubuntu Mono Bold" size="18.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <effect>
-                  <Bloom />
-               </effect>
-            </JFXButton>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="root" layoutX="238.0" layoutY="17.0" prefHeight="668.0" prefWidth="755.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15px;">
+      <AnchorPane fx:id="root" layoutX="5.0" layoutY="1.0" prefHeight="668.0" prefWidth="755.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15;">
          <effect>
             <DropShadow />
          </effect>

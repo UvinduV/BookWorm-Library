@@ -42,11 +42,10 @@ public class AdminDashboardController implements Initializable {
     UserBo userBo = (UserBo) BoFactory.getBOFactory().getBo(BoFactory.BoTypes.USER);
 
     public void setAction(String path) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/books_form.fxml"));
-        Scene scene = new Scene(root);
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
+
+        AnchorPane load = FXMLLoader.load(getClass().getResource(path));
+        root.getChildren().clear();
+        root.getChildren().add(load);
     }
     @FXML
     void btnBooksOnAction(ActionEvent event) throws IOException {
@@ -72,7 +71,12 @@ public class AdminDashboardController implements Initializable {
 
     @FXML
     void btnDashboardOnAction(ActionEvent event) throws IOException {
-        setAction("/view/Admindashboard.fxml");
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/Admindashboard.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
+
     }
 
     @Override
