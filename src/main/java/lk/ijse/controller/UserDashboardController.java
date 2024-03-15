@@ -35,7 +35,7 @@ public class UserDashboardController {
 
     @FXML
     void btnBooksOnAction(ActionEvent event) throws IOException {
-        setAction("/view/user_book.fxml");
+        setAction("/view/UsersBook.fxml");
     }
 
     @FXML
@@ -51,7 +51,7 @@ public class UserDashboardController {
 
     @FXML
     void btnPasswordOnAction(ActionEvent event) throws IOException {
-        setAction("/view/change_password.fxml");
+        setAction("/view/ProfileForm.fxml");
     }
 
     @FXML
@@ -68,7 +68,7 @@ public class UserDashboardController {
 
     @FXML
     void btnBorrowedOnAction(ActionEvent event) throws IOException {
-
+        setAction("/view/BorrowedBookForm.fxml");
     }
 
     public void setUserName(String userName) {

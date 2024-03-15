@@ -26,7 +26,7 @@ public class UserLoginFormController {
 
     @FXML
     private TextField txtUsername;
-    MainUserController mainUserController = new MainUserController();
+    UserDashboardController userDashboardController = new UserDashboardController();
     UserBo userBo = (UserBo) BoFactory.getBOFactory().getBo(BoFactory.BoTypes.USER);
 
     @FXML
@@ -88,7 +88,7 @@ public class UserLoginFormController {
     }
 
     public void openWindow() throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/user_dashboard.fxml"));
+        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/UserDashboard.fxml"));
 
         Scene scene = new Scene(rootNode);
         Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
