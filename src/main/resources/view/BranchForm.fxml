@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="668.0" prefWidth="765.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BranchFormController">
+   <children>
+      <AnchorPane fx:id="root" layoutX="5.0" layoutY="5.0" prefHeight="668.0" prefWidth="755.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15px;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label layoutX="31.0" layoutY="27.0" prefHeight="46.0" prefWidth="194.0" text="Branches">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtName" layoutX="579.0" layoutY="48.0" prefHeight="27.0" prefWidth="167.0">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtId" layoutX="31.0" layoutY="140.0" prefHeight="30.0" prefWidth="204.0" promptText="Branch ID" />
+            <TextField fx:id="txtAddress" layoutX="257.0" layoutY="140.0" prefHeight="30.0" prefWidth="204.0" promptText="Address" />
+            <ComboBox fx:id="cmbStatus" layoutX="257.0" layoutY="196.0" prefHeight="30.0" prefWidth="204.0" promptText="Status" />
+            <JFXButton buttonType="RAISED" layoutX="31.0" layoutY="292.0" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-radius: 5px; -fx-background-color: #27ae60;" text="Save" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="119.0" layoutY="292.0" onAction="#btnSearchOnAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-radius: 5px; -fx-background-color: #2980b9;" text="Search" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="211.0" layoutY="292.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-radius: 5px; -fx-background-color: #f1c40f;" text="Update" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="627.0" layoutY="292.0" onAction="#btnCloseOnAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-radius: 5px; -fx-background-color: #e74c3c;" text="Close" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tableBranch" layoutX="28.0" layoutY="346.0" prefHeight="310.0" prefWidth="705.0" style="-fx-background-radius: 5px;">
+               <columns>
+                  <TableColumn fx:id="colbId" prefWidth="125.0" text="Branch ID" />
+                  <TableColumn fx:id="colAddress" prefWidth="203.0" text="Address" />
+                  <TableColumn fx:id="colbNumber" prefWidth="135.0" text="No Of Books" />
+                  <TableColumn fx:id="colStatus" prefWidth="121.0" text="Status" />
+                  <TableColumn fx:id="colAdminId" prefWidth="120.0" text="Admin ID" />
+               </columns>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.35221734642982483" green="0.6447368264198303" blue="0.3619680106639862" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TableView>
+            <TextField fx:id="txtBookNumber" layoutX="490.0" layoutY="140.0" prefHeight="30.0" prefWidth="204.0" promptText="No Books" />
+            <ComboBox fx:id="cmbAdmin" layoutX="31.0" layoutY="196.0" prefHeight="30.0" prefWidth="204.0" promptText="Admin" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
