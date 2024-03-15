@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="668.0" prefWidth="755.0" style="-fx-background-color: #f5f6fa; -fx-background-radius: 15;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.ProfileFormController">
+   <children>
+      <AnchorPane fx:id="root" prefHeight="668.0" prefWidth="755.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15px;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label layoutX="24.0" layoutY="24.0" prefHeight="46.0" prefWidth="292.0" text="Change Password">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtName" layoutX="577.0" layoutY="33.0" prefHeight="27.0" prefWidth="167.0">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsername" layoutX="24.0" layoutY="134.0" prefHeight="38.0" prefWidth="244.0" promptText="Username" />
+            <Label layoutX="24.0" layoutY="111.0" prefHeight="16.0" prefWidth="124.0" text="UserName">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="205.0" prefHeight="16.0" prefWidth="124.0" text="New Password">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="307.0" prefHeight="16.0" prefWidth="178.0" text="Confirm New Password">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="26.0" layoutY="395.0" onAction="#btnUpdatePasswordOnAction" prefHeight="38.0" prefWidth="134.0" style="-fx-background-color: #ff9f43; -fx-background-radius: 10px;" text="Update Password" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <PasswordField fx:id="txtPassword" layoutX="24.0" layoutY="228.0" prefHeight="38.0" prefWidth="244.0" promptText="Password" />
+            <PasswordField fx:id="txtConfirmPassword" layoutX="24.0" layoutY="334.0" prefHeight="38.0" prefWidth="244.0" promptText="Confirm Password" />
+            <TextField fx:id="txtVisibleConfirmPassword" layoutX="24.0" layoutY="334.0" prefHeight="38.0" prefWidth="244.0" visible="false" />
+            <TextField fx:id="txtVisiblePassword" layoutX="24.0" layoutY="228.0" prefHeight="38.0" prefWidth="244.0" visible="false" />
+            <JFXButton fx:id="passwordVisiblebtn" layoutX="275.0" layoutY="228.0" onAction="#btnPasswordVisible" prefHeight="38.0" prefWidth="37.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="confrimPasswordVisiblebtn" layoutX="275.0" layoutY="334.0" onAction="#btnConfirmPasswordVisible" prefHeight="38.0" prefWidth="37.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="visibleCloseBtn" layoutX="276.0" layoutY="228.0" onAction="#btnVisibleClose" prefHeight="38.0" prefWidth="37.0" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="closeConfirmVisible" layoutX="276.0" layoutY="334.0" onAction="#btnConfirmVisibleClose" prefHeight="38.0" prefWidth="37.0" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
