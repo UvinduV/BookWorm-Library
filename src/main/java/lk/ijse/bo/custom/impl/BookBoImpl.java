@@ -1,13 +1,10 @@
-package lk.ijse.bo.impl;
+package lk.ijse.bo.custom.impl;
 
 import lk.ijse.bo.custom.BookBo;
 import lk.ijse.dao.DaoFactory;
 import lk.ijse.dao.custom.BookDao;
 import lk.ijse.dto.BookDto;
-import lk.ijse.dto.BorrowedBooksDto;
 import lk.ijse.entity.Book;
-import lk.ijse.entity.BorrowedBooks;
-import lk.ijse.entity.User;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

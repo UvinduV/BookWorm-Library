@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #f5f6fa;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.BookController">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="12.0" prefHeight="677.0" prefWidth="223.0" style="-fx-background-color: #353b48; -fx-background-radius: 15px;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="205.0" onAction="#btnBooksOnAction" prefHeight="48.0" prefWidth="156.0" text="Books" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Bloom />
+               </effect>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="27.0" layoutY="268.0" onAction="#btnBranchesOnAction" prefHeight="48.0" prefWidth="156.0" text="   Branches" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Bloom />
+               </effect>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="339.0" onAction="#btnUsersOnAction" prefHeight="48.0" prefWidth="156.0" text="Users" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Bloom />
+               </effect>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="600.0" onAction="#btnSignOutOnAction" prefHeight="48.0" prefWidth="156.0" text="Sign Out" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Bloom />
+               </effect>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="34.0" layoutY="139.0" onAction="#btnDashboardOnAction" prefHeight="48.0" prefWidth="156.0" text="  Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Bloom />
+               </effect>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root" layoutX="238.0" layoutY="17.0" prefHeight="668.0" prefWidth="755.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15px;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label layoutX="31.0" layoutY="27.0" prefHeight="46.0" prefWidth="194.0" text="Books">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtName" layoutX="579.0" layoutY="48.0" prefHeight="27.0" prefWidth="167.0">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTitle" layoutX="31.0" layoutY="140.0" prefHeight="30.0" prefWidth="204.0" promptText="Book Title" />
+            <TextField fx:id="txtAuthor" layoutX="257.0" layoutY="140.0" prefHeight="30.0" prefWidth="204.0" promptText="Author" />
+            <ComboBox fx:id="cmbGenre" layoutX="31.0" layoutY="226.0" prefHeight="30.0" prefWidth="204.0" promptText="Genre" />
+            <ComboBox fx:id="cmbStatus" layoutX="257.0" layoutY="226.0" prefHeight="30.0" prefWidth="204.0" promptText="Status" />
+            <JFXButton buttonType="RAISED" layoutX="31.0" layoutY="292.0" onAction="#btnSaveOnAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-radius: 5px; -fx-background-color: #27ae60;" text="Save" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="119.0" layoutY="292.0" onAction="#btnSearchOnAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-radius: 5px; -fx-background-color: #2980b9;" text="Search" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="211.0" layoutY="292.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-radius: 5px; -fx-background-color: #f1c40f;" text="Update" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="351.0" layoutY="292.0" onAction="#btnDeleteOnAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-radius: 5px; -fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tableBooks" layoutX="28.0" layoutY="346.0" prefHeight="310.0" prefWidth="705.0" style="-fx-background-radius: 5px;">
+              <columns>
+                <TableColumn fx:id="colTitle" prefWidth="184.0" text="Book Title" />
+                <TableColumn fx:id="colAuthor" prefWidth="185.0" text="Book Author" />
+                  <TableColumn fx:id="colGenre" prefWidth="174.0" text="Genre" />
+                  <TableColumn fx:id="colStatus" prefWidth="160.0" text="Status" />
+              </columns>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.35221734642982483" green="0.6447368264198303" blue="0.3619680106639862" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
