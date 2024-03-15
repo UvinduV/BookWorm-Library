@@ -1,8 +1,8 @@
-package lk.ijse.bo.impl;
+package lk.ijse.bo.custom.impl;
 
 import lk.ijse.bo.custom.AdminBo;
-import lk.ijse.dao.custom.AdminDao;
 import lk.ijse.dao.DaoFactory;
+import lk.ijse.dao.custom.AdminDao;
 import lk.ijse.dto.AdminDto;
 import lk.ijse.entity.Admin;
 

@@ -55,7 +55,7 @@ public class AdminDashboardController implements Initializable {
 
     @FXML
     void btnBranchesOnAction(ActionEvent event) throws IOException {
-        setAction("/view/branch_form.fxml");
+        setAction("/view/BranchForm.fxml");
     }
 
     @FXML
@@ -66,7 +66,7 @@ public class AdminDashboardController implements Initializable {
 
     @FXML
     void btnUsersOnAction(ActionEvent event) throws IOException {
-        setAction("/view/user_form.fxml");
+        setAction("/view/UsersForm.fxml");
     }
 
     @FXML
