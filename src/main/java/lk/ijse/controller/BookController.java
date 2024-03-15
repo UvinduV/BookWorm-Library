@@ -64,27 +64,7 @@ public class BookController implements Initializable {
 
     BookBo bookBo = (BookBo) BoFactory.getBOFactory().getBo(BoFactory.BoTypes.BOOK);
 
-    @FXML
-    void btnBooksOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/books_form.fxml"));
 
-        Scene scene = new Scene(root);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
-
-    @FXML
-    void btnBranchesOnAction(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(this.getClass().getResource("/view/branch_form.fxml"));
-
-        Scene scene = new Scene(root);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
 
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
@@ -147,16 +127,6 @@ public class BookController implements Initializable {
 
     }
 
-    @FXML
-    void btnSignOutOnAction(ActionEvent event) throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/AdminLoginForm.fxml"));
-
-        Scene scene = new Scene(rootNode);
-
-        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
-        primaryStage.setScene(scene);
-        primaryStage.setTitle("Book Worm");
-    }
 
     @FXML
     void btnUpdateOnAction(ActionEvent event) {
@@ -184,10 +154,7 @@ public class BookController implements Initializable {
         }
     }
 
-    @FXML
-    void btnUsersOnAction(ActionEvent event) {
 
-    }
 
     public void btnDashboardOnAction(ActionEvent actionEvent) throws IOException {
         Parent root = FXMLLoader.load(this.getClass().getResource("/view/Admindashboard.fxml"));
