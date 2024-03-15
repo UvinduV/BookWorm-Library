@@ -61,23 +61,65 @@ public class AdminDashboardController implements Initializable {
 
     @FXML
     void btnSignOutOnAction(ActionEvent event) throws IOException {
+        setAction("/view/AdminLoginForm.fxml");
 
     }
 
     @FXML
     void btnUsersOnAction(ActionEvent event) throws IOException {
-
+        setAction("/view/user_form.fxml");
     }
 
     @FXML
     void btnDashboardOnAction(ActionEvent event) throws IOException {
-
+        setAction("/view/Admindashboard.fxml");
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        setTxtBranchCount(txtBranchCount);
+        setTxtBookCount(txtBookCount);
+        setUserCount(txtUserCount);
     }
 
+    private void setUserCount(Label txtUserCount) {
+        String userCount = String.valueOf(0);
 
+        try {
+            userCount = userBo.getUserCount();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        txtUserCount.setText(userCount);
+    }
+
+    public void setTxtBranchCount(Label txtBranchCount) {
+        String branchCount = String.valueOf(0);
+        try {
+            branchCount = branchBo.getBranchCount();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        txtBranchCount.setText(branchCount);
+    }
+
+    public void setTxtBookCount(Label txtBookCount){
+        String bookCount = String.valueOf(0);
+
+        try {
+            bookCount = bookBo.getBookCount();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        txtBookCount.setText(bookCount);
+    }
+
+    public void setUserName(String userName) {
+       /* this.txtName.setText(userName);*/
+        if(txtName != null){
+            txtName.setText(userName);
+        }else {
+            System.out.println("txtName is null");
+        }
+    }
 }
