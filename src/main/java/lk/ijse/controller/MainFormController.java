@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainWindowController {
+public class MainFormController {
     @FXML
     private AnchorPane root;
 

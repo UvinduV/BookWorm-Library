@@ -1,7 +1,7 @@
 package lk.ijse;
 
-public class InitializerWrapper {
+public class LauncherWrapper {
     public static void main(String[] args) {
-        Initializer.main(args);
+        Launcher.main(args);
     }
 }

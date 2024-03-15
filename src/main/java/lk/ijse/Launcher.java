@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Initializer extends Application {
+public class Launcher extends Application {
     public static void main(String[] args) {
 
         launch(args);
@@ -13,7 +13,7 @@ public class Initializer extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/main_window.fxml"))));
+        stage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("/view/MainForm.fxml"))));
         stage.centerOnScreen();
         stage.setTitle("Book Worm");
 
