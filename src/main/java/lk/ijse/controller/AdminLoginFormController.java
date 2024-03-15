@@ -42,8 +42,6 @@ public class AdminLoginFormController {
         mainAdminController.setUserName(userName);
 
 
-
-
     }
 
     @FXML
