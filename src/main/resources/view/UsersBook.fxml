@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="668.0" prefWidth="755.0" style="-fx-background-color: #f5f6fa;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.UsersBookController">
+   <children>
+      <AnchorPane fx:id="root" layoutY="3.0" prefHeight="668.0" prefWidth="755.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15px;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label layoutX="31.0" layoutY="27.0" prefHeight="46.0" prefWidth="194.0" text="Books">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtName" layoutX="579.0" layoutY="48.0" prefHeight="27.0" prefWidth="167.0">
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtSearchBook" layoutX="31.0" layoutY="140.0" prefHeight="30.0" prefWidth="254.0" promptText="Search Book" />
+            <JFXButton buttonType="RAISED" layoutX="306.0" layoutY="140.0" onAction="#btnSearchOnAction" prefHeight="30.0" prefWidth="72.0" style="-fx-background-radius: 5px; -fx-background-color: #2980b9;" text="Search" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Ubuntu Mono Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
