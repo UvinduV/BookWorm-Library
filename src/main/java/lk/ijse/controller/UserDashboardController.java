@@ -35,7 +35,7 @@ public class UserDashboardController {
 
     @FXML
     void btnBooksOnAction(ActionEvent event) throws IOException {
-        setAction("/view/UsersBook.fxml");
+        setAction("/view/SearchBookForm.fxml");
     }
 
     @FXML
@@ -56,10 +56,12 @@ public class UserDashboardController {
 
     @FXML
     void btnSignOutOnAction(ActionEvent event) throws IOException {
-        Parent rootNode = FXMLLoader.load(this.getClass().getResource("/view/UserLoginForm.fxml"));
+        /*Stage stage = (Stage) this.rootNode.getScene().getWindow();
+        stage.close();
+        System.out.println("logout to user");*/
 
-        Scene scene = new Scene(rootNode);
-
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/AdminLoginForm.fxml"));
+        Scene scene = new Scene(root);
         Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
         primaryStage.setScene(scene);
         primaryStage.setTitle("Book Worm");

@@ -61,7 +61,7 @@ public class UserSignUpFormController {
 
                 if(isSaved){
                     clearFields();
-                    new Alert(Alert.AlertType.CONFIRMATION,"Account Creation Succesfull").show();
+                    new Alert(Alert.AlertType.CONFIRMATION,"Account Create Succesfull").show();
                 }else{
                     new Alert(Alert.AlertType.ERROR,"Account not created").show();
                 }
@@ -85,7 +85,7 @@ public class UserSignUpFormController {
     public boolean validateUser(){
         String userName = txtUsername.getText();
 
-        boolean isUserNameValidated = Pattern.matches("[A-Z][a-zA-Z\\s]+", userName);
+        boolean isUserNameValidated = Pattern.matches("([a-z]){4,}(\\d){2,}", userName);
         if (!isUserNameValidated) {
             new Alert(Alert.AlertType.ERROR, "Invalid UserName!").show();
             return false;
@@ -93,17 +93,17 @@ public class UserSignUpFormController {
 
         String password = txtPassword.getText();
 
-        boolean isPasswordValidated = Pattern.matches("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}", password);
+        boolean isPasswordValidated = Pattern.matches("(\\d){4,}", password);
         if (!isPasswordValidated) {
-            new Alert(Alert.AlertType.ERROR, "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters").show();
+            new Alert(Alert.AlertType.ERROR, "Must contain at least 4 numbers").show();
             return false;
         }
 
         String confirmPassword = txtConfirmPassword.getText();
 
-        boolean isconfirmPasswordValidated = Pattern.matches("(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}", password);
+        boolean isconfirmPasswordValidated = Pattern.matches("(\\d){4,}", password);
         if (!isconfirmPasswordValidated) {
-            new Alert(Alert.AlertType.ERROR, "Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters").show();
+            new Alert(Alert.AlertType.ERROR, "Must contain at least o4 numbers").show();
             return false;
         }
 
