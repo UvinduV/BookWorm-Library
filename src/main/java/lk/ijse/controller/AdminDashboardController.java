@@ -49,7 +49,7 @@ public class AdminDashboardController implements Initializable {
     }
     @FXML
     void btnBooksOnAction(ActionEvent event) throws IOException {
-        setAction("/view/books_form.fxml");
+        setAction("/view/BookForm.fxml");
 
     }
 
@@ -60,7 +60,12 @@ public class AdminDashboardController implements Initializable {
 
     @FXML
     void btnSignOutOnAction(ActionEvent event) throws IOException {
-        setAction("/view/AdminLoginForm.fxml");
+       /* setAction("/view/AdminLoginForm.fxml");*/
+        Parent root = FXMLLoader.load(this.getClass().getResource("/view/AdminLoginForm.fxml"));
+        Scene scene = new Scene(root);
+        Stage primaryStage =(Stage) this.rootNode.getScene().getWindow();
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Book Worm");
 
     }
 
