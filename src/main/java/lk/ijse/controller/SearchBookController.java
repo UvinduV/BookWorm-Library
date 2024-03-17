@@ -16,7 +16,7 @@ import lk.ijse.dto.BookDto;
 
 import java.io.IOException;
 
-public class UsersBookController {
+public class SearchBookController {
     @FXML
     private AnchorPane root;
 
@@ -42,10 +42,10 @@ public class UsersBookController {
             BookDto bookDto = bookBo.searchBook(title);
 
             if(bookDto != null){
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/SearchBookForm.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/BorrowNewBookForm.fxml"));
                 Parent rootNode = loader.load();
 
-                SearchBookFormController detailsController = loader.getController();
+                BorrowNewBookFormController detailsController = loader.getController();
 
                 detailsController.searchBookDetails(bookDto);
 
